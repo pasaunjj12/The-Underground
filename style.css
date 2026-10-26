@@ -1,0 +1,178 @@
+/* ==============================
+   THE UNDERGROUND | KING-KADO
+   Black • Blood Red • White
+============================== */
+
+:root {
+    --black: #0A0A0A;
+    --deep-red: #7F0000;
+    --signal-red: #E10600;
+    --white: #F2F2F2;
+}
+
+/* RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: Arial, sans-serif;
+}
+
+/* MAIN BACKGROUND */
+
+.underground {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            rgba(10, 10, 10, 0.55),
+            rgba(10, 10, 10, 0.85)
+        ),
+        url("images/the-underground-bg.webp");
+
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-color: #0A0A0A;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* ARTIST CONTENT */
+
+.artist-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 35px 25px;
+    text-align: center;
+    background: rgba(10, 10, 10, 0.78);
+    border: 1px solid rgba(225, 6, 0, 0.55);
+    border-radius: 16px;
+    box-shadow: 0 0 35px rgba(225, 6, 0, 0.18);
+}
+
+/* HEADINGS */
+
+.eyebrow {
+    margin-bottom: 10px;
+    color: var(--signal-red);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+h1 {
+    margin-bottom: 28px;
+    font-size: clamp(2rem, 7vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: 2px;
+    text-shadow: 0 0 18px rgba(225, 6, 0, 0.5);
+}
+
+/* KING-KADO IMAGE */
+
+.artist-image {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    max-height: 340px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto 22px;
+    border: 2px solid var(--deep-red);
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(225, 6, 0, 0.3);
+}
+
+/* ARTIST NAME */
+
+h2 {
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+}
+
+.tagline {
+    margin-bottom: 30px;
+    color: #C8C8C8;
+    font-size: 0.75rem;
+    line-height: 1.7;
+    letter-spacing: 1.5px;
+}
+
+/* SOCIAL AND MUSIC LINKS */
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.social-links a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--white);
+    background: rgba(127, 0, 0, 0.35);
+    border: 1px solid var(--deep-red);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* HOVER EFFECT */
+
+.social-links a:hover,
+.social-links a:focus-visible {
+    background: var(--signal-red);
+    border-color: var(--signal-red);
+    box-shadow: 0 0 18px rgba(225, 6, 0, 0.45);
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+
+.footer-text {
+    margin-top: 30px;
+    color: #888888;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+}
+
+/* MOBILE ADJUSTMENTS */
+
+@media (max-width: 480px) {
+    .underground {
+        padding: 20px 12px;
+        background-attachment: scroll;
+    }
+
+    .artist-card {
+        padding: 28px 18px;
+    }
+
+    .artist-image {
+        max-width: 220px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
